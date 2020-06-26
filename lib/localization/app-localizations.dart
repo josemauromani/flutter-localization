@@ -3,6 +3,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:localization/localization/app-localizations-delegate.dart';
 
 class AppLocalizations {
 
@@ -29,4 +30,10 @@ class AppLocalizations {
     return _localizationsValues[key];
   }
   
+  static AppLocalizations of(BuildContext context) {
+    return Localizations.of<AppLocalizations>(context, AppLocalizations);
+  }
+
+  static const LocalizationsDelegate<AppLocalizations> delegate = AppLocalizationsDelegate();
+
 }
