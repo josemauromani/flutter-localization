@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:localization/localization/app-localizations-delegate.dart';
+import 'package:localization/localization/app-localizations.dart';
+import 'package:localization/localization/app-translate.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -11,13 +14,13 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home'),
+        title: Text(AppTranslate(context).text('home_page_title')),
       ),
       body: Container(
         child: FlatButton(
           color: Colors.red,
           child: Text(
-            'Sobre o App',
+            AppTranslate(context).text('button_about_app'),
             style: TextStyle(
               color: Colors.white,
               fontWeight: FontWeight.bold,
