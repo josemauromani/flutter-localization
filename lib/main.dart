@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Localizations',
+      title: 'Flutter Localizations by José Mauro Morais Mani',
       theme: ThemeData(
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
@@ -21,8 +21,8 @@ class MyApp extends StatelessWidget {
       // Informa quais os locales que serão suportados
       supportedLocales: [
         Locale('en','US'),
+        Locale('pt','BR'),
         Locale('es','ES'),
-        Locale('pt','BR')
       ],
       // classes que fazem o delegate
       localizationsDelegates: [
