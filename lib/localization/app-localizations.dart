@@ -16,5 +16,17 @@ class AppLocalizations {
     String jsonValues = await rootBundle.loadString('assets/lang/${locale.languageCode}.json');
     // Converte os valores carregados em um Map
     Map<String, dynamic> mapValues = json.decode(jsonValues);
+    //Faz uma transformação no Map convertendo o value do map para String
+    _localizationsValues = mapValues.map((key, value) {
+      return MapEntry(key, value.toString());
+    });
+
+  return true;
+
   }
+
+  String translate(String key) {
+    return _localizationsValues[key];
+  }
+  
 }
